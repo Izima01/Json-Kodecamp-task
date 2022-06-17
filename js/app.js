@@ -142,8 +142,8 @@ function renderUI(array) {
                     <h5 class="postTitle">${post.title}</h5>
                     <p class="postBody">${post.body}</p>
                 </div>
-                <button class="updateBtn btn btn-primary px-3" onclick="editBark(${post.id})">Update</button>
-                <button class="deleteBtn btn btn-danger px-3" onclick="confirmDelete(${post.id})">Delete</button>
+                <button class="updateBtn btn btn-primary px-4 py-2" onclick="editBark(${post.id})"><i class="bi bi-pen-fill"></i></button>
+                <button class="deleteBtn btn btn-danger px-4 py-2" onclick="confirmDelete(${post.id})"><i class="bi bi-trash3-fill"></i></button>
             </div>`
     });
     postHolder.innerHTML = postWrapper;

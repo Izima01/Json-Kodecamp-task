@@ -2,11 +2,6 @@ nav {
     box-shadow: 10px 6px 12px;
 }
 
-main {
-    background: linear-gradient(45deg, rgba(248, 224, 195, 0.7), rgba(248, 224, 196, 0.7)), url(../images/bg-outer.jpg);
-    background-attachment: scroll;
-}
-
 #title, textarea {
     outline: none !important;
     border: 0 !important;
@@ -27,6 +22,7 @@ textarea:focus {
     border: 2px solid blue;
     border-radius: 20px;
     padding: 20px;
+    padding-bottom: 30px;
     margin-bottom: 20px;
     position: relative;
     top: 0;
@@ -85,6 +81,10 @@ textarea:focus {
     }
     img {
         width: 50% !important;
+    }
+    main {
+        width: 85% !important;
+        margin: 0 auto;
     }
 }
 
