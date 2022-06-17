@@ -47,7 +47,6 @@ function Bark(e) {
 // // Updating a Post
 function editBark(id) {
     console.log(id)
-    document.querySelector('.updateBox').style= "visibility: hidden;"
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
@@ -70,6 +69,8 @@ function editBark(id) {
                     if (data.title !== "") {
                         console.log(data.title)
                         postTitle.innerHTML = data.title;
+                        document.querySelector('.updateBox').style= "visibility: hidden;"
+                        document.querySelector('.updateTitle').style= "visibility: hidden;"
                     }
                     else if (data.title === "") {
                         document.querySelector('.updateBox').style= "visibility: visible;"
@@ -83,6 +84,8 @@ function editBark(id) {
                     if (data.body !== "") {
                         console.log(data.body)
                         postBody.innerHTML = data.body
+                        document.querySelector('.updateBox').style= "visibility: hidden;"
+                        document.querySelector('.updateBody').style= "visibility: hidden;"
                     }
                     else if (data.body === "") {
                         document.querySelector('.updateBox').style= "visibility: visible;"
