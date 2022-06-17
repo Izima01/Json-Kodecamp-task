@@ -1,0 +1,89 @@
+
+
+#title, textarea {
+    outline: none !important;
+    border: 0 !important;
+    border-bottom: 1px solid grey !important;
+    border-radius: 0 !important;
+    padding: 10px 0 10px 20px !important;
+    font-size: 18px !important;
+}
+
+#title:focus,
+textarea:focus {
+    outline: none !important;
+    border: none !important;
+}
+
+.post {
+    width: 49.2%;
+    border: 2px solid blue;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.postTitle {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.postBody {
+    margin: 8px 0 0 8px;
+    padding-bottom: 28px;
+}
+
+.updateBtn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 10px 0 18px;
+}
+
+.deleteBtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px 0 18px 0;
+}
+
+.deleteBtn:hover, .updateBtn:hover {
+    transform: scale(1.2);
+}
+
+.deleteBox {
+    top: 40%;
+    left: 40%;
+    position: fixed;
+    width: 20%;
+    border: 1px solid red;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: pink;
+    visibility: hidden;
+    z-index: 10;
+}
+
+@media (max-width: 426px) {
+    .post {
+        width: 100%;
+    }
+    .deleteBox {
+        width: 60%;
+        left: 20%;
+    }
+    img {
+        width: 50% !important;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 769px) {
+    .deleteBox {
+        width: 40%;
+        left: 30%;
+    }
+}
