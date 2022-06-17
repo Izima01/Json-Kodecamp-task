@@ -132,10 +132,10 @@ function renderUI(array) {
                         <img src="images/writer${Math.floor(post.id/10)}.jpg" class="ps-lg-2 img-fluid rounded-circle w-75" alt="">
                     </div>
                     <div class="col-lg-8 col-md-6 col-6">
-                        <h4 class="text-center ps-sm-0">Izzy Ezinne</h4>
+                        <h4 class="text-center">Bingo</h4>
                     </div>
                     <div class="col-lg-1 col-md-2 col-2" id="postID">
-                        <h4 class="pe-md-2 ps-sm-auto">${post.id}</h4>
+                        <h4 class="pe-md-2 ps-auto">${post.id}</h4>
                     </div>
                 </div>
                 <div>
