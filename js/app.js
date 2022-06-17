@@ -47,6 +47,7 @@ function Bark(e) {
 // // Updating a Post
 function editBark(id) {
     console.log(id)
+    document.querySelector('.updateBox').style= "visibility: hidden;"
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
@@ -61,14 +62,18 @@ function editBark(id) {
     })
         .then((response) => response.json())
         .then((data) => {
+            
             let postTitles = document.querySelectorAll(".postTitle");
             let postBodies = document.querySelectorAll(".postBody");
-
             postTitles.forEach((postTitle, index) => {
                 if (index + 1 === id) {
                     if (data.title !== "") {
                         console.log(data.title)
                         postTitle.innerHTML = data.title;
+                    }
+                    else if (data.title === "") {
+                        document.querySelector('.updateBox').style= "visibility: visible;"
+                        document.querySelector('.updateTitle').style= "visibility: visible;"
                     }
                 }
             });
@@ -78,6 +83,10 @@ function editBark(id) {
                     if (data.body !== "") {
                         console.log(data.body)
                         postBody.innerHTML = data.body
+                    }
+                    else if (data.body === "") {
+                        document.querySelector('.updateBox').style= "visibility: visible;"
+                        document.querySelector('.updateBody').style= "visibility: visible;"
                     }
                 }
             });
@@ -120,6 +129,11 @@ function renderUI(array) {
     array.forEach(post => {
         postWrapper += 
             `<div class="post">
+                <div class="updateBox text-center">
+                    <h4 class="updateTitle">Please input title.</h4>
+                    <h4 class="updateBody">Please input body.</h4>
+
+                </div>
                 <div class="deleteBox">
                     <h4>Are you sure you want to delete post ID <span id="deleteID"></span></h4>
                     <div class="d-flex justify-content-between pt-2">

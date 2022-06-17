@@ -58,7 +58,7 @@ textarea:focus {
     transform: scale(1.2);
 }
 
-.deleteBox {
+.deleteBox, .updateBox {
     top: 40%;
     left: 40%;
     position: fixed;
@@ -71,11 +71,15 @@ textarea:focus {
     z-index: 10;
 }
 
+.updateTitle, .updateBody {
+    visibility: hidden;
+}
+
 @media (max-width: 426px) {
     .post {
         width: 100%;
     }
-    .deleteBox {
+    .deleteBox, .updateBox {
         width: 60%;
         left: 20%;
     }
@@ -89,7 +93,7 @@ textarea:focus {
 }
 
 @media (min-width: 500px) and (max-width: 769px) {
-    .deleteBox {
+    .deleteBox, .updateBox {
         width: 40%;
         left: 30%;
     }
