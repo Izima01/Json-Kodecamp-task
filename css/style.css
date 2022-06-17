@@ -1,4 +1,11 @@
+nav {
+    box-shadow: 10px 6px 12px;
+}
 
+main {
+    background: linear-gradient(45deg, rgba(248, 224, 195, 0.7), rgba(248, 224, 196, 0.7)), url(../images/bg-outer.jpg);
+    background-attachment: scroll;
+}
 
 #title, textarea {
     outline: none !important;
@@ -39,15 +46,15 @@ textarea:focus {
 
 .updateBtn {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: -1px;
+    left: -1px;
     border-radius: 0 10px 0 18px;
 }
 
 .deleteBtn {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: -1px;
+    right: -1px;
     border-radius: 10px 0 18px 0;
 }
 

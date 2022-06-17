@@ -128,10 +128,10 @@ function renderUI(array) {
                     </div>
                 </div>
                 <div class="info w-100 h-auto row pb-3 d-flex align-items-center">
-                    <div class="col-lg-2 col-md-3 col-3">
-                        <img src="images/writer${Math.floor(post.id/10)}.jpg" class="ps-lg-2 img-fluid rounded-circle w-100" alt="">
+                    <div class="col-lg-3 col-md-4 col-4">
+                        <img src="images/writer${Math.floor(post.id/10)}.jpg" class="ps-lg-2 img-fluid rounded-circle w-75" alt="">
                     </div>
-                    <div class="col-lg-9 col-md-6 col-7">
+                    <div class="col-lg-8 col-md-6 col-6">
                         <h4 class="text-center ps-sm-0">Izzy Ezinne</h4>
                     </div>
                     <div class="col-lg-1 col-md-2 col-2" id="postID">
