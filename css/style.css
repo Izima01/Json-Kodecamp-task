@@ -58,28 +58,32 @@ textarea:focus {
     transform: scale(1.2);
 }
 
-.deleteBox, .updateBox {
-    top: 40%;
+.deleteBox, .updateTitle, .updateBody {
+    top: 25%;
     left: 40%;
     position: fixed;
     width: 20%;
     border: 1px solid red;
     padding: 15px;
     border-radius: 10px;
-    background-color: pink;
     visibility: hidden;
     z-index: 10;
+    background-color: aliceblue;
 }
 
-.updateTitle, .updateBody {
-    visibility: hidden;
+.updateTitle {
+    top: 52% !important;
 }
+
+ .updateBody {
+    top: 58%;
+ }
 
 @media (max-width: 426px) {
     .post {
         width: 100%;
     }
-    .deleteBox, .updateBox {
+    .deleteBox {
         width: 60%;
         left: 20%;
     }
@@ -93,7 +97,7 @@ textarea:focus {
 }
 
 @media (min-width: 500px) and (max-width: 769px) {
-    .deleteBox, .updateBox {
+    .deleteBox {
         width: 40%;
         left: 30%;
     }

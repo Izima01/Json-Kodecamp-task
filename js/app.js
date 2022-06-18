@@ -69,12 +69,11 @@ function editBark(id) {
                     if (data.title !== "") {
                         console.log(data.title)
                         postTitle.innerHTML = data.title;
-                        document.querySelector('.updateBox').style= "visibility: hidden;"
                         document.querySelector('.updateTitle').style= "visibility: hidden;"
                     }
                     else if (data.title === "") {
-                        document.querySelector('.updateBox').style= "visibility: visible;"
                         document.querySelector('.updateTitle').style= "visibility: visible;"
+                        postBody.innerHTML += ""
                     }
                 }
             });
@@ -84,12 +83,11 @@ function editBark(id) {
                     if (data.body !== "") {
                         console.log(data.body)
                         postBody.innerHTML = data.body
-                        document.querySelector('.updateBox').style= "visibility: hidden;"
                         document.querySelector('.updateBody').style= "visibility: hidden;"
                     }
                     else if (data.body === "") {
-                        document.querySelector('.updateBox').style= "visibility: visible;"
                         document.querySelector('.updateBody').style= "visibility: visible;"
+                        postBody.innerHTML += ""
                     }
                 }
             });
@@ -132,16 +130,13 @@ function renderUI(array) {
     array.forEach(post => {
         postWrapper += 
             `<div class="post">
-                <div class="updateBox text-center">
-                    <h4 class="updateTitle">Please input title.</h4>
-                    <h4 class="updateBody">Please input body.</h4>
-
-                </div>
+                <h4 class="updateTitle text-danger">Please input title.</h4>
+                <h4 class="updateBody text-danger">Please input body.</h4>
                 <div class="deleteBox">
                     <h4>Are you sure you want to delete post ID <span id="deleteID"></span></h4>
                     <div class="d-flex justify-content-between pt-2">
-                        <button class="yesBtn btn btn-outline-danger px-4">Yes</button>
-                        <button class="noBtn btn btn-outline-success px-4">No</button>
+                        <button class="yesBtn btn btn-danger px-4">Yes</button>
+                        <button class="noBtn btn btn-success px-4">No</button>
                     </div>
                 </div>
                 <div class="info w-100 h-auto row pb-3 d-flex align-items-center">
