@@ -73,7 +73,7 @@ function editBark(id) {
                     }
                     else if (data.title === "") {
                         document.querySelector('.updateTitle').style= "visibility: visible;"
-                        postBody.innerHTML += ""
+                        postTitle.innerHTML += "";
                     }
                 }
             });
@@ -87,7 +87,7 @@ function editBark(id) {
                     }
                     else if (data.body === "") {
                         document.querySelector('.updateBody').style= "visibility: visible;"
-                        postBody.innerHTML += ""
+                        postBody.innerHTML += "";
                     }
                 }
             });

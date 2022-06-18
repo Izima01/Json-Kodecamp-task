@@ -73,17 +73,19 @@ textarea:focus {
 
 .updateTitle {
     top: 52% !important;
+    padding: 10px 15px;
 }
 
- .updateBody {
-    top: 58%;
- }
+.updateBody {
+    top: 61% !important;
+    padding: 10px 15px;
+}
 
 @media (max-width: 426px) {
     .post {
         width: 100%;
     }
-    .deleteBox {
+    .deleteBox, .updateTitle, .updateBody {
         width: 60%;
         left: 20%;
     }
@@ -97,7 +99,7 @@ textarea:focus {
 }
 
 @media (min-width: 500px) and (max-width: 769px) {
-    .deleteBox {
+    .deleteBox, .updateTitle, .updateBody{
         width: 40%;
         left: 30%;
     }
